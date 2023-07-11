@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { userContext } from "./Context";
+import Header from "./Header";
 import "./App.css";
 
 function App() {
@@ -7,11 +9,15 @@ function App() {
   const [product1, setProduct1] = useState(40000);
   const [product2, setProduct2] = useState(20000);
   const [product3, setProduct3] = useState(30000);
+
   return (
     <div className="App">
+      <userContext.Provider value={"สมหญิง"}>
+        <Header />
+      </userContext.Provider>
       <div>
         <h3>จำนวนสินค้าในตะกร้า {totalItems}</h3>
-        <h3>ราคาสินค้าในตะกร้าทั้งงหมด {totalPrice} บาท</h3>
+        <h3>ราคาสินค้าในตะกร้าทั้งหมด {totalPrice} บาท</h3>
         <img
           src="5-Samsung-Galaxy-Z-Fold3.jpg"
           alt="5-Samsung-Galaxy-Z-Fold3"
