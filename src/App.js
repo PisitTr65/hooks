@@ -4,9 +4,9 @@ import "./App.css";
 function App() {
   const [totalPrice, setTotalprice] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
-  const [product1, setProduct1] = useState(150);
-  const [product2, setProduct2] = useState(800);
-  const [product3, setProduct3] = useState(300);
+  const [product1, setProduct1] = useState(40000);
+  const [product2, setProduct2] = useState(20000);
+  const [product3, setProduct3] = useState(30000);
   return (
     <div className="App">
       <div>
@@ -30,8 +30,10 @@ function App() {
       </button>
       <button
         onClick={() => {
-          setTotalItems(totalItems - 1);
-          setTotalprice(totalPrice - product1);
+          if (totalItems > 0) {
+            setTotalItems(totalItems - 1);
+            setTotalprice(totalPrice - product1);
+          }
         }}
       >
         นำออกจากตะกล้า
@@ -55,8 +57,10 @@ function App() {
       </button>
       <button
         onClick={() => {
-          setTotalItems(totalItems - 1);
-          setTotalprice(totalPrice - product2);
+          if (totalItems > 0) {
+            setTotalItems(totalItems - 1);
+            setTotalprice(totalPrice - product2);
+          }
         }}
       >
         นำออกจากตะกล้า
@@ -80,8 +84,10 @@ function App() {
       </button>
       <button
         onClick={() => {
-          setTotalItems(totalItems - 1);
-          setTotalprice(totalPrice - product3);
+          if (totalItems > 0) {
+            setTotalItems(totalItems - 1);
+            setTotalprice(totalPrice - product3);
+          }
         }}
       >
         นำออกจากตะกล้า
