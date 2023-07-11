@@ -9,7 +9,7 @@ function App() {
   const [product3, setProduct3] = useState(300);
   return (
     <div className="App">
-      <did>
+      <div>
         <h3>จำนวนสินค้าในตะกร้า {totalItems}</h3>
         <h3>ราคาสินค้าในตะกร้าทั้งงหมด {totalPrice} บาท</h3>
         <img
@@ -19,7 +19,7 @@ function App() {
         />
         <br />
         github ราคา {product1} บาท
-      </did>
+      </div>
       <button
         onClick={() => {
           setTotalItems(totalItems + 1);
@@ -36,7 +36,7 @@ function App() {
       >
         นำออกจากตะกล้า
       </button>
-      <did>
+      <div>
         <img
           src="packshot-samsung-galaxy-a73-mint.png"
           alt="packshot-samsung-galaxy-a73-mint"
@@ -44,7 +44,7 @@ function App() {
         />
         <br />
         github ราคา {product2} บาท
-      </did>
+      </div>
       <button
         onClick={() => {
           setTotalItems(totalItems + 1);
@@ -61,7 +61,7 @@ function App() {
       >
         นำออกจากตะกล้า
       </button>
-      <did>
+      <div>
         <img
           src="06563f7a21544f7ebd90efaf635d01fc.jpg"
           alt="06563f7a21544f7ebd90efaf635d01fc"
@@ -69,7 +69,7 @@ function App() {
         />
         <br />
         github ราคา {product3} บาท
-      </did>
+      </div>
       <button
         onClick={() => {
           setTotalItems(totalItems + 1);
